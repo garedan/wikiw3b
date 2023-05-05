@@ -6,8 +6,8 @@ import Link from 'next/link'
 import posts from "./posts";
 import Food from "../components/food";
 import { getLatestItems } from "../services/storeService";
-import { abiWikiw3bAddress } from "../utils/config.js";
-import Wikiwe3b from "../utils/abi/Wikiw3b.json"
+import { abiAddPostAddress } from "../utils/config.js";
+import AddPost from "../utils/abi/AddPost.json"
 import { ethers } from "ethers";
 //test
 //import { abiPlatziFoodAddress } from "../config.js";
@@ -22,12 +22,12 @@ export default function Home({ items }) {
       "https://eth-sepolia.g.alchemy.com/v2/B54X_xFsbfi5cwsmQ-42FPPGzmIGzotb"
     );
     const contract = new ethers.Contract(
-      abiWikiw3bAddress,
-      Wikiwe3b.abi,
+      abiAddPostAddress,
+      AddPost.abi,
       provider
     );
 
-    const articles = await contract.getAllWikiw3bs();
+    const articles = await contract.getAllPosts();
     console.log(articles);
     setArticles(articles);
   };
