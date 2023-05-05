@@ -13,28 +13,28 @@ async function main() {
 
   const lockedAmount = hre.ethers.utils.parseEther("0.001");
 
-  const Wikiw3b = await hre.ethers.getContractFactory("Wikiw3b");
+  const Wikiw3b = await hre.ethers.getContractFactory("AddPost");
   const wikiw3b = await Wikiw3b.deploy();
 
   await wikiw3b.deployed();
 
   console.log(
-    `Wikiw3b with ${ethers.utils.formatEther(
+    `AddPost with ${ethers.utils.formatEther(
       lockedAmount
     )}ETH deployed to ${wikiw3b.address}`
   );
 
   let config = `
-  export const abiWikiw3bAddress = "${wikiw3b.address}"
+  export const abiAddPostAddress = "${wikiw3b.address}"
   `;
 
   let data = JSON.stringify(config);
 
-  fs.writeFileSync("../web/utils/config.js", JSON.parse(data));
+  fs.writeFileSync("../frontend/utils/config.js", JSON.parse(data));
 
   fs.copyFile(
-    './artifacts/contracts/Wikiw3b.sol/Wikiw3b.json', 
-    '../web/utils/abi/Wikiw3b.json', 
+    './artifacts/contracts/AddPost.sol/AddPost.json', 
+    '../frontend/utils/abi/AddPost.json', 
     (err) => {
       if (err) {
         console.log("Error ocurred: ", err);

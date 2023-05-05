@@ -1,3 +1,3 @@
 
-  export const abiWikiw3bAddress = "0xdDD850714EE154F7675b01F0563C8a92De8cC34F"
+  export const abiAddPostAddress = "0x72814ca8AE42BEB3d67d5dB0e68D8A807cFcA493"
   
