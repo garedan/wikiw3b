@@ -1,11 +1,11 @@
 import React from 'react'
 import "@uiw/react-md-editor/markdown-editor.css";
-import "@uiw/react-markdown-preview/markdown.css"; 
+import "@uiw/react-markdown-preview/markdown.css";
 import dynamic from "next/dynamic";
 import rehypeSanitize from "rehype-sanitize";
 import { useState } from "react";
-import { abiWikiw3bAddress } from "../utils/config.js";
-import Wikiwe3b from "../utils/abi/Wikiw3b.json"
+import { abiAddPostAddress } from "../utils/config.js";
+import AddPost from "../utils/abi/AddPost.json"
 import { useRouter } from "next/router";
 import { ethers } from "ethers";
 
@@ -17,8 +17,7 @@ const MDEditor = dynamic(
 const AddArticle = () => {
   const router = useRouter();
   const [formInput, updateFormInput] = useState({
-    content: "",
-    commnents: "",
+    topic: "",
   });
 
   const addArticle = async () => {
@@ -26,8 +25,8 @@ const AddArticle = () => {
     if(ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);    
         const signer = provider.getSigner();
-        const contract = new ethers.Contract(abiWikiw3bAddress, Wikiwe3b.abi, signer);
-        const transaction = await contract.addWikiw3b(formInput.content, formInput.commnents);
+        const contract = new ethers.Contract(abiAddPostAddress, AddPost.abi, signer);
+        const transaction = await contract.addPost(formInput.topic);
         transaction.wait();
         router.push('/');
     }
@@ -55,10 +54,10 @@ const AddArticle = () => {
         style={{ width: '50%', margin: 'auto', marginTop: '2%' }}
       />
       <input
-          placeholder="Comment"
+          placeholder="Javascript"
           className="mt-2 border rounded p-4"
           onChange={(e) =>
-            updateFormInput({ ...formInput, commnents: e.target.value })
+            updateFormInput({ ...formInput, topic: e.target.value })
           }
           style={{ marginLeft: '42%', marginTop: '2%' }}
         />

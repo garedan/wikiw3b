@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from 'next/image'
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
+/* import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";  */
 
 function MyApp({ Component, pageProps })
 {
