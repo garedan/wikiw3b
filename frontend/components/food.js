@@ -4,10 +4,7 @@ import { convertToPath } from "../lib/items";
 import Image from 'next/image'
 
 export default function Food ({ item, showAs }) {
-    //console.log(item);
-     /* uint32 id;
-  address creator_address;
-  string topic; */
+
     if (showAs === "Page") {
         return (
            
@@ -53,7 +50,7 @@ export default function Food ({ item, showAs }) {
      return (
         <div>
           <div>
-            <Link href={`/posts/${item.creator_address}`}>
+            <Link href={`/posts/${item.id}`}>
               <a>
               <div key={item.id} className="border shadow rounded-xl overflow-hidden">
                 {(item.topic === 'Javascript' || item.topic === '') &&
