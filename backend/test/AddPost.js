@@ -29,5 +29,14 @@ describe("AddPost", function () {
     var postsByOwner = await addPost.getPostsByOwner();
 
     expect(postsByOwner.length).to.equal(1);    
+
+
+    const balanceBefore = await ethers.provider.getBalance(addr1.address);
+    console.log("addr1 balance before!", ethers.utils.formatEther(balanceBefore));
+    const tipTxn = await addPost.tip(1, {value: ethers.utils.parseEther("1000")}); 
+
+    await tipTxn.wait();
+    const balanceAfter = await ethers.provider.getBalance(addr1.address)
+    console.log("addr1 balance after!", ethers.utils.formatEther(balanceAfter));
   });
 });

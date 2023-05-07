@@ -47,5 +47,13 @@ contract AddPost {
         }
 
         return myPosts;
-    }    
+    }   
+
+    function tip(uint256 _index) 
+        external 
+        payable 
+    {
+        address payable owner = payable(posts[_index].creator_address);
+        owner.transfer(msg.value);
+    } 
 }
