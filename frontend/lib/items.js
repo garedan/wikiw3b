@@ -24,3 +24,8 @@ export async function getItemData(id) {
 export function convertToPath(title) {
   return title.toLowerCase().replace(/\s/g, "-");
 }
+
+export default function addressesEqual(addr1, addr2) {
+  if(!addr1 || !addr2) return false;
+  return addr1.toUpperCase() === addr2.toUpperCase();
+}
