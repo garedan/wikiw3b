@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Link from 'next/link'
-import posts from "./posts";
 import Food from "../components/food";
-import { getLatestItems } from "../services/storeService";
 import { abiAddPostAddress } from "../utils/config.js";
 import AddPost from "../utils/abi/AddPost.json"
 import { ethers } from "ethers";
@@ -79,19 +73,19 @@ export default function Home({ items }) {
  
  
   return (
-    <div className="flex justify-center">
-      <div className="px-4" style={{ maxWidth: "1600px" }}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+    <div className="h-screen">
+      <div className="grid grid-cols-1 grid-rows-3 gap-4 h-5/6 w-4/5 mx-auto" style={{ maxWidth: '1000px'}}>
+        <div className="row-span-1 col-span-1" style={{  borderRadius: '25px'}}>
           {articles &&
           articles.map((item, i) => (
-            //<Product key={item.id} item={item} showAs="item" />
-            <div>
+            <div className="gap-2 p-10" style={{ height: '400px', borderRadius: '25px'}}>
               <Food key={item.id} item={item} showAs="item" /> 
               {
               addressesEqual(item.creator_address, walletAccount) ?  
                 <UserCircleIcon className="h-5 w-5 text-indigo-100" /> :
                 <TipButton ethereum={ethereum} index={i} />
               }
+              
             </div>
           ))}
           

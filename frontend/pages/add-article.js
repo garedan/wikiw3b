@@ -53,15 +53,22 @@ const AddArticle = () => {
         }}
         style={{ width: '50%', margin: 'auto', marginTop: '2%' }}
       />
-      <input
+      {/* <input
           placeholder="Javascript"
           className="mt-2 border rounded p-4"
           onChange={(e) =>
             updateFormInput({ ...formInput, topic: e.target.value })
           }
           style={{ marginLeft: '42%', marginTop: '2%' }}
-        />
+        /> */}
+        {/* <label for="topic" style={{ marginLeft: '2%', marginTop: '2%' }}>Tema: </label> */}
 
+        <select name="topic" id="topic" className="mt-2 border rounded p-4" onChange={(e) =>
+            updateFormInput({ ...formInput, topic: e.target.value })
+          }   style={{ marginLeft: '45%', marginTop: '2%' }} >
+          <option value="Javascript">Javascript</option>
+          <option value="React">React</option>
+        </select>
       {/* <div style={{ paddingTop: 50 }}>
         <Markdown source={value} />
       </div> */}

@@ -95,8 +95,7 @@ function MyApp({ Component, pageProps })
       {(walletAccount && isConnectedToSepolia) && (
         <div>
           <main>
-            {/* {alert(walletAccount)} */}
-            <nav className="border-b p-6">
+            <nav className="border-b border-black pt-4 p-2">
               <p className="text-4xl font-bold">
                     <Image
                   src="/logoww.png"
@@ -105,15 +104,15 @@ function MyApp({ Component, pageProps })
                   height={150}
                 />
                 </p>
-              <div className="flex mt-4">
+              <div className="flex">
                 <Link href="/">
-                  <a className="mr-4 text-pink-500">Inicio</a>
+                  <a className="mr-4 text-blue-800">Inicio</a>
                 </Link>
                 <Link href="/add-article">
-                  <a className="mr-6 text-pink-500">Agregar articulos</a>
+                  <a className="mr-6 text-blue-800">Agregar articulos</a>
                 </Link>
                 <Link href="/my-dishes">
-                  <a className="mr-6 text-pink-500">Mis articulos</a>
+                  <a className="mr-6 text-blue-800">Mis articulos</a>
                 </Link>
               </div>
             </nav>

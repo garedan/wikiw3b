@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",
+    "dotenv": "^16.0.3",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
     "postcss": "^8.3.9",
