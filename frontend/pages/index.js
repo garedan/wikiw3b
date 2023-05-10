@@ -101,7 +101,7 @@ export default function Home({ items }) {
   );
 }
 
-export async function getStaticProps() {
+/* export async function getStaticProps() {
   const res = await getLatestItems();
 
   return {
@@ -109,4 +109,4 @@ export async function getStaticProps() {
       items: res,
     },
   };
-}
+} */

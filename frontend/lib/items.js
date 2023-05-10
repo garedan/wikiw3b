@@ -1,20 +1,20 @@
-import { getItems } from "../services/storeService";
+import { getAllArticles } from "../services/storeService";
 
 export async function getPathsFromTitle() {
-  const items = await getItems();
+  const items = await getAllArticles();
 
   return items.map((item) => {
     return {
       params: {
-        id: convertToPath(item.title),
+        id: item['id'].toString(),
       },
     };
   });
 }
 
 export async function getItemData(id) {
-  const items = await getItems();
-  const product = items.find((item) => convertToPath(item.title) === id);
+  const items = await getAllArticles();
+  const product = items.find((item) => item['id'].toString() === id);
   return {
     id,
     data: product,

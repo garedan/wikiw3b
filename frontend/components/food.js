@@ -9,10 +9,31 @@ export default function Food ({ item, showAs }) {
         return (
            
             <div key={item.id} className="border shadow rounded-xl overflow-hidden" >
-                <img style={{ height: "20rem", margin: 'auto' }} src={item.image} />
+                
+                {(item.topic === 'Javascript' || item.topic === '') &&
+                    <Image
+                    src="/JavaScript-logo.png"
+                    fill
+                    width={200}
+                    height={200}
+                    margin='45%'
+                    borderRadius='25px'
+                  />}
+                    {/* <img style={{ height: "20rem" }} src={item.image} /> */}
+                {
+                    (item.topic === 'React') &&
+                    <Image
+                    src="/react.jpg"
+                    fill
+                    width={200}
+                    height={200}
+                    margin='45%'
+                    borderRadius='25px'
+                  />
+                }
                 <div className="p-4" >
                     <span
-                    style={{ height: "64px", margin: '45%' }}
+                    style={{ height: "64px", margin: 'auto' }}
                     className="text-2xl font-semibold"
                     >
                     {item.creator_address}
@@ -71,12 +92,12 @@ export default function Food ({ item, showAs }) {
                   />
                 }
                 <div className="p-4">
-                    <p
-                    style={{ height: "64px" }}
+                    <span
+                    style={{ height: "70px", overflow: "hidden", margin: "0" }}
                     className="font-semibold"
                     >
                     {item.creator_address}
-                    </p>
+                    </span>
                     <div style={{ height: "70px", overflow: "hidden" }}>
                     {/* <p>{dishes.name}</p> */}
                     <p className="text-gray-400">{item.topic}</p>
