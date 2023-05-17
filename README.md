@@ -36,6 +36,7 @@ Frontend desarrollado en NextJS, desde donde, a través de un editor de Markdown
   - Fleek
   - Web3.js
   - Node js
+  - Express
 
 ## Equipo
 
