@@ -156,11 +156,12 @@
 .wrongNetwork {
   width: 30rem;
   height: 10rem;
-  background: rgb(238,174,202);
-  background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: rgb(107, 151, 233);
+  background: -moz-radial-gradient(circle, rgb(65, 33, 245) 0%, rgba(148,187,233,1) 100%);
+  background: -webkit-radial-gradient(circle, rgb(65, 33, 245) 0%, rgba(148,187,233,1) 100%);
+  background: radial-gradient(circle, rgb(65, 33, 245) 0%, rgba(148,187,233,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+  border-radius: 25px;
 }
 
 .wrongNetwork > h1 {
@@ -170,11 +171,11 @@
   align-items: center;
   font-size: 2rem;
   line-height: 2rem;
-  color: black;
+  color: white;
   margin-bottom: 1rem;
   margin-top: 1rem;
   --tw-text-opacity: 1;
-  color: rgba(153,27,27,var(--tw-text-opacity));
+  /*color: rgba(153,27,27,var(--tw-text-opacity));*/
 }
 
 .wrongNetwork > p {
@@ -182,8 +183,24 @@
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  color: black;
+  color: white;
   margin-bottom: 1rem;
   --tw-text-opacity: 1;
-    color: rgba(153,27,27,var(--tw-text-opacity));
+  /*color: rgba(153,27,27,var(--tw-text-opacity));*/
+}
+
+.eth_connect_wallet_button {
+  height: 45px;
+  border: 0;
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: -webkit-linear-gradient(left, #1e0feb, #35aee2);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
 }

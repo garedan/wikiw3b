@@ -78,8 +78,7 @@ function MyApp({ Component, pageProps })
           <div className={styles.wrongNetwork}>
             <h1>Red Equivocada</h1>
             <p>
-              {""}
-              Por favor conectarse a la red Sepolia en su Metamask. Gracias.
+              &nbsp; Por favor conectarse a la red Sepolia en su Metamask. Gracias.
             </p>
           </div>
         </div>
@@ -95,15 +94,16 @@ function MyApp({ Component, pageProps })
       {(walletAccount && isConnectedToSepolia) && (
         <div>
           <main>
-            <nav className="border-b border-black pt-4 p-2">
-              <p className="text-4xl font-bold">
+            <nav className="border-b border-black pt-4 pb-2 pl-10">
+              <p className="text-4xl font-bold pb-0">
                     <Image
                   src="/logoww.png"
                   fill
                   width={200}
-                  height={150}
+                  height={90}
                 />
                 </p>
+                <p className="text-3xl font-bold pb-6 pl-0 pt-0">Enciclopedia web3</p>
               <div className="flex">
                 <Link href="/">
                   <a className="mr-4 text-blue-800">Inicio</a>

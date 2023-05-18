@@ -7,8 +7,8 @@ export default function Food ({ item, showAs }) {
     if (showAs === "Page") {
         return (
            
-            <div key={item.id} className="bg-blue-100" >
-                <span style={{ maxWidth: '70%', float: 'right', marginTop: '2%', marginRight: '2%', marginBottom: '2%'}}>
+            <div key={item.id} className="bg-blue-100" style={{ maxWidth: '97%', margin: 'auto'}}>
+                <span style={{ maxWidth: '70%', float: 'right', marginTop: '2%', marginRight: '9%', marginBottom: '2%'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet risus nullam eget felis eget nunc. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Nisi est sit amet facilisis magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Nunc mattis enim ut tellus elementum. Elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Orci ac auctor augue mauris augue neque gravida in fermentum. Urna molestie at elementum eu facilisis sed odio morbi. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Nunc mattis enim ut tellus elementum.
                         <p>
                          
