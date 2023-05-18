@@ -1,7 +1,6 @@
 import 'dotenv/config'
 import "./database/connectdb.js"
 import express from 'express';
-import authRouter from './routes/auth.route.js' ;
 import linkRouter from "./routes/link.route.js"
 
 const app = express();

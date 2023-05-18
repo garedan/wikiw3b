@@ -3,8 +3,6 @@ import { Wiki } from "../models/WikiW3b.js";
 //ver todos los tutoriales
 export const getTutoriales = async(req, res) => {
     try {
-        //const {title, tutorial, billetera} = req.body;
-        //await Link.find({uid: req.uid})
         const wiki = await Wiki.find()
 
        return res.json({wiki}) 
@@ -53,7 +51,7 @@ export const deleteTutorial = async (req, res) => {
 
 
 
-//crear los tutoriales
+//Agregar los tutoriales
 export const createTutoriales = async (req, res) => {
     try {
         const {title, tutorial, billetera} = req.body;
@@ -65,7 +63,7 @@ export const createTutoriales = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        return res.status(500).json({error: 'error de servidor'})
+        return res.status(500).json({error: 'error de servidor no deja guardar'})
     }
 }
 
