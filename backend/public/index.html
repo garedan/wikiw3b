@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regtistrp tutorial</title>
+</head>
+
+<body>
+    <h1>agregar tutorial</h1>
+    <form action="" id="form">
+        <input type="text" id="title" placeholder="escribir title" value="indexhtml">
+        <input type="number" id="billetera" placeholder="billetera" value="577777711254">
+        <input type="text" id="tutorial" placeholder="tutorial" value="vamos a ver como crear un buen solidity">
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <div>
+        <h2>Tutorial: </h2>
+    </div>
+</body>
+
+<script>
+    const form = document.getElementById('form')
+    const title = document.getElementById('title')
+    const billetera = document.getElementById('billetera');
+    const tutorial = document.getElementById('tutorial');
+
+
+    form.addEventListener("submit", async (e) => {
+
+                e.preventDefault();
+                try {
+                    const res = await fetch("/api/v1/links", {
+                        method: "post",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            title,
+                            billetera,
+                            tutorial,
+                        }),
+                    });
+                    console.log(res.ok, res.status);
+                    const data = await res.json()
+                    console.log(data);
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+
+</script>
+
+</html>
