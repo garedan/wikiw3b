@@ -100,7 +100,7 @@ function MyApp({ Component, pageProps })
                   src="/logoww.png"
                   fill
                   width={200}
-                  height={90}
+                  height={75}
                 />
                 </p>
                 <p className="text-3xl font-bold pb-6 pl-0 pt-0">Enciclopedia web3</p>

@@ -31,7 +31,6 @@ Frontend desarrollado en NextJS, desde donde, a través de un editor de Markdown
   - HardHat
   - Solidity
   - Push o Lens
-  - OpenZeppelin
   - NextJS
   - Fleek
   - Web3.js
@@ -40,8 +39,8 @@ Frontend desarrollado en NextJS, desde donde, a través de un editor de Markdown
 
 ## Equipo
 
-[**Andres Felipe Ospina Gualteros**]()   
-[**David Almandoz**]()   
-[**David Rueda**]()    
-[**Eduardo García**](https://github.com/garedan)   
+[//]: # "([**Andres Felipe Ospina Gualteros**]())"   
+[//]: # "([**David Rueda**]())"    
+[//]: # "([**David Almandoz**]()   )" 
 [**Ervin Castro Perez**](https://github.com/ervcdev)   
+[**Eduardo García**](https://github.com/garedan)   
