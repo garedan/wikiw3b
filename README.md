@@ -37,8 +37,10 @@ Frontend desarrollado en NextJS, desde donde, a través de un editor de Markdown
   - Node js
   - Express
 
-## Video
+## Video demo en Remix
 
+
+https://github.com/garedan/wikiw3b/assets/123281480/7f4d5244-c03d-4451-8ef8-1348a74668c1
 
 
 ## Equipo
