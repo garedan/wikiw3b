@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Comments from '../components/Comment'
 
 export default function Food ({ item, showAs }) {
 
@@ -12,7 +13,7 @@ export default function Food ({ item, showAs }) {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet risus nullam eget felis eget nunc. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Nisi est sit amet facilisis magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Nunc mattis enim ut tellus elementum. Elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Orci ac auctor augue mauris augue neque gravida in fermentum. Urna molestie at elementum eu facilisis sed odio morbi. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Nunc mattis enim ut tellus elementum.
                         <p>
                          
-                        <b style={{ fontSize: '25px'}}>Amet risus nullam</b>
+                        <b style={{ fontSize: '25px'}}>Amet risus nullam!</b>
                         </p>
                     </span>
                 {(item.topic === 'Javascript' || item.topic === '') &&
@@ -47,6 +48,10 @@ export default function Food ({ item, showAs }) {
                     <p className="text-gray-800">{item.topic}</p>
                     </div>
                 </div>
+                <div id="disqus_thread" style={{ width: '50%', color: 'red', margin: 'auto'}}>Disqus
+                  <h1>Comments - GeeksforGeeks</h1>
+                  <Comments slug={`http://localhost:3001/posts/${item.id}`} id={`http://localhost:3001/posts/${item.id}`} title={item.topic}/>
+                </div>
             </div>
 
         )
@@ -63,7 +68,7 @@ export default function Food ({ item, showAs }) {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet risus nullam eget felis eget nunc. 
                         <p>
                          
-                        <b style={{ fontSize: '25px'}}>Amet risus nullam</b>
+                        <b style={{ fontSize: '25px'}}>Amet risus nullam!</b>
                         </p>
                     </span>
                 <div>

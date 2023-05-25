@@ -103,7 +103,7 @@ function MyApp({ Component, pageProps })
                   height={75}
                 />
                 </p>
-                <p className="text-3xl font-bold pb-6 pl-0 pt-0">Enciclopedia web3</p>
+                {/* <p className="text-3xl font-bold pb-6 pl-0 pt-0">Enciclopedia web3</p> */}
               <div className="flex">
                 <Link href="/">
                   <a className="mr-4 text-blue-800">Inicio</a>

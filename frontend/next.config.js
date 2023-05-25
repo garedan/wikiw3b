@@ -3,6 +3,7 @@ const removeImports = require("next-remove-imports")();
 
 const nextConfig = {
   reactStrictMode: true,
+  exportTrailingSlash: true,
   images: {
     domains: ["localhost"],
   }, 
