@@ -1,4 +1,4 @@
-![Logo provisorio](logoww.png)
+![Logo provisorio](https://github.com/garedan/wikiw3b/blob/0e92ca5260ee34d7f3eb65b7c3d9eb12003796fd/frontend/public/logoww.png)
 
 Wikiw3b es una plataforma basada en la blockchain Ethereum, para almacenar información sobre el ecosistema web3. 
 
@@ -36,6 +36,12 @@ Frontend desarrollado en NextJS, desde donde, a través de un editor de Markdown
   - Web3.js
   - Node js
   - Express
+
+## Video demo en Remix
+
+
+https://github.com/garedan/wikiw3b/assets/123281480/7f4d5244-c03d-4451-8ef8-1348a74668c1
+
 
 ## Equipo
 
