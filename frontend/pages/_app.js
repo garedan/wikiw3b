@@ -78,7 +78,7 @@ function MyApp({ Component, pageProps })
           <div className={styles.wrongNetwork}>
             <h1>Red Equivocada</h1>
             <p>
-              &nbsp; Por favor conectarse a la red Sepolia en su Metamask. Gracias.
+              &nbsp; Por favor conectarse a la red Goerli en su Metamask. Gracias.
             </p>
           </div>
         </div>

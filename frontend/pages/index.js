@@ -6,8 +6,10 @@ import { ethers } from "ethers";
 import addressesEqual from "../lib/items";
 import {UserCircleIcon} from '@heroicons/react/20/solid';
 import TipButton from "../components/tip-button";
+//test
+import { getRandomPhoto } from "./api/hello";
 
-export default function Home({ items }) {
+export default function Home({ items, photo }) {
 
   const [walletAccount, setWalletAccount] = useState("");
   const [isConnectedToSepolia, setIsConnectedToSepolia] = useState(true);
@@ -21,7 +23,7 @@ export default function Home({ items }) {
       console.log("Metamask is installed");
 
       ethereum.on("chainChanged", function(networkId) {
-        if(parseInt(networkId) !== 0xaa36a7) {
+        if(parseInt(networkId) !== 5) {
           setIsConnectedToSepolia(false);
         }else {
           setIsConnectedToSepolia(true);
@@ -54,7 +56,7 @@ export default function Home({ items }) {
 
   const getAllArticles = async () => {
     const provider = new ethers.providers.JsonRpcProvider(
-      "https://eth-sepolia.g.alchemy.com/v2/B54X_xFsbfi5cwsmQ-42FPPGzmIGzotb"
+      "https://eth-goerli.g.alchemy.com/v2/SShG9FTsR3tnsu_XL0RTCK2OM3LPavog"
     );
     const contract = new ethers.Contract(
       abiAddPostAddress,
@@ -71,7 +73,11 @@ export default function Home({ items }) {
     getAllArticles();
   }, []);
  
- 
+ //test
+  
+
+ //test
+
   return (
     <div className="h-screen">
       <div className="grid grid-cols-1 grid-rows-3 gap-4 h-5/6 w-4/5 mx-auto" style={{ maxWidth: '1000px'}}>
@@ -82,18 +88,59 @@ export default function Home({ items }) {
               <Food key={item.id} item={item} showAs="item" /> 
               {
               addressesEqual(item.creator_address, walletAccount) ?  
-                <UserCircleIcon className="h-5 w-5 text-indigo-100" /> :
+                <UserCircleIcon className="h-5 w-5 text-indigo-200" /> :
                 <TipButton ethereum={ethereum} index={i} />
               }
               
             </div>
           ))}
-          
+          <div>
+      {/* <h1>{photo.title}!</h1>
+      <img src={photo.url} /> */}
+    </div>
         </div>
       </div>
     </div>
   );
 }
+
+
+
+
+/* function SSG({ photo }) {
+  return (
+    <div>
+      <h1>{photo.title}!</h1>
+      <img src={photo.url} />
+    </div>
+  );
+}
+
+export async function getStaticProps() {
+  let photo;
+  try {
+    photo = await getRandomPhoto();
+  } catch (e) {
+    
+    return {
+      notFound: true,
+    };
+  }
+
+  if (!photo) {
+    
+    return {
+      notFound: true,
+    };``
+  }
+
+  return {
+    props: {
+      photo,
+    },
+  };
+}
+ */
 
 /* export async function getStaticProps() {
   const res = await getLatestItems();

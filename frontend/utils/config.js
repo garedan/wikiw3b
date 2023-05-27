@@ -1,3 +1,3 @@
 
-  export const abiAddPostAddress = "0x552fc112cEb8410236de6f6a6c71d2494DbCe6dC"
+  export const abiAddPostAddress = "0x36080da7882f8C1837700bf77070FC0133EFC0b6"
   

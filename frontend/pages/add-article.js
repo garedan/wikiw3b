@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import dynamic from "next/dynamic";
 import rehypeSanitize from "rehype-sanitize";
-import { useState } from "react";
 import { abiAddPostAddress } from "../utils/config.js";
 import AddPost from "../utils/abi/AddPost.json"
 import { useRouter } from "next/router";
@@ -32,6 +31,19 @@ const AddArticle = () => {
     }
 
 }
+  
+  let signer = '0';
+  let dir;
+  const { ethereum } = window;
+  if(ethereum) {
+      const provider = new ethers.providers.Web3Provider(ethereum);    
+      signer = provider.getSigner();
+      dir = signer.getAddress();
+  }
+
+  async function myAddress() {
+    await signer.getAddress();
+  }
 
   const [value, setValue] = useState("**Hello world!!!**");
   return (
@@ -53,27 +65,36 @@ const AddArticle = () => {
         }}
         style={{ width: '50%', margin: 'auto', marginTop: '2%' }}
       />
-      {/* <input
-          placeholder="Javascript"
-          className="mt-2 border rounded p-4"
-          onChange={(e) =>
-            updateFormInput({ ...formInput, topic: e.target.value })
-          }
-          style={{ marginLeft: '42%', marginTop: '2%' }}
-        /> */}
-        {/* <label for="topic" style={{ marginLeft: '2%', marginTop: '2%' }}>Tema: </label> */}
-
+      
+        <span style={{ marginLeft: '40%'}}>Tema: </span>
         <select name="topic" id="topic" className="mt-2 border rounded p-4" onChange={(e) =>
             updateFormInput({ ...formInput, topic: e.target.value })
-          }   style={{ marginLeft: '45%', marginTop: '2%' }} >
+          }   style={{ marginLeft: '3%', marginTop: '2%' }} >
           <option value="Javascript">Javascript</option>
           <option value="React">React</option>
         </select>
-      {/* <div style={{ paddingTop: 50 }}>
-        <Markdown source={value} />
-      </div> */}
-     {/*  <EditerMarkdown source={value} /> */}
+        
+          
 
+        
+
+         
+        <div class="form-container" style={{ margin: 'auto'}}>
+            {/* <h1>agregar tutorial</h1> */ }
+            &nbsp;
+            <form action="" id="form">
+                <label for="title" class="label" id="centrar">Titulo del proyecto</label>
+                <input type="text" id="title" class="input input-wiki" />
+
+                <label for="billetera" class="label" id="centrar">Billetera</label>
+                <input type="number" id="billetera" class="input input-wiki" value='12345' />
+
+                <label for="tutorial" class="label" id="centrar">Agregar tutorial</label>
+                <textarea name="" id="tutorial" placeholder="" className="input-area input-wiki"></textarea>
+                <button type="submit" class="input input-wiki " className="primary-button">Enviar</button>
+                </form>
+        </div>
+          
     </div>
      <button
           onClick={addArticle}

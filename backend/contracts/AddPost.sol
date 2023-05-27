@@ -81,7 +81,8 @@ contract AddPost {
 							"Bravo! ", // cuerpo de la notificación  
 							addressToString(msg.sender), // cuerpo de la notificación  
 							" te ha enviado ", // cuerpo de la notificación  
-							uint2str((msg.value) * (10 ** 18)), // cuerpo de la notificación  
+							//uint2str((msg.value) * (10 ** 18)), // cuerpo de la notificación  
+                            "0.01"
 							" de propina!" // cuerpo de la notificación  
 						)  
 					)  
