@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 
 export const getAllArticles = async () => {
     const provider = new ethers.providers.JsonRpcProvider(
-      "https://eth-sepolia.g.alchemy.com/v2/B54X_xFsbfi5cwsmQ-42FPPGzmIGzotb"
+      "https://eth-goerli.g.alchemy.com/v2/SShG9FTsR3tnsu_XL0RTCK2OM3LPavog"
     );
     const contract = new ethers.Contract(
       abiAddPostAddress,
