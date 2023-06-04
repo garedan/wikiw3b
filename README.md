@@ -38,9 +38,6 @@ Frontend desarrollado en NextJS, desde donde, a través de un editor de Markdown
   - Node js
 
 ## Equipo
-
-[**Andres Felipe Ospina Gualteros**]()   
-[**David Almandoz**]()   
-[**David Rueda**]()    
+ 
 [**Eduardo García**](https://github.com/garedan)   
 [**Ervin Castro Perez**](https://github.com/ervcdev)   
