@@ -11,10 +11,14 @@ const wikiSchema = new Schema({
         require: true,
     },
     billetera: {
-        type: Number,
+        type: String,
         ref: 'User',
         require: true,
-        unique: true
+        unique: true,
+       /*  validate: {
+            validator: Number.isInteger,
+            message: '{VALUE} no es un número entero válido'
+          } */
     }
 })
 
