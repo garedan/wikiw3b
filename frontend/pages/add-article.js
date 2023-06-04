@@ -45,7 +45,16 @@ const AddArticle = () => {
     await signer.getAddress();
   }
 
-  const [value, setValue] = useState("**Hello world!!!**");
+  const [value, setValue] = useState(
+    (`### Building ![](https://img.stackshare.io/service/5936/nextjs.png)
+    A web form has a client-server relationship. 
+    They are used to send data handled by a web server 
+    for processing and storage. The form itself is the client, 
+    and the server is any storage mechanism that can be used to store, 
+    retrieve and send data when needed.
+    This guide will teach you how to create a web form with Next.js.`)
+    
+    );
   return (
     <div>
     <div data-color-mode="light">
@@ -63,7 +72,7 @@ const AddArticle = () => {
         previewOptions={{
           rehypePlugins: [[rehypeSanitize]],
         }}
-        style={{ width: '50%', margin: 'auto', marginTop: '2%' }}
+        style={{ width: '50%', margin: 'auto', marginTop: '2%', height: '500px' }}
       />
       
         <span style={{ marginLeft: '40%'}}>Tema: </span>
@@ -73,39 +82,20 @@ const AddArticle = () => {
           <option value="Javascript">Javascript</option>
           <option value="React">React</option>
         </select>
-        
-          
-
-        
-
-         
-        <div class="form-container" style={{ margin: 'auto'}}>
-            {/* <h1>agregar tutorial</h1> */ }
-            &nbsp;
-            <form action="" id="form">
-                <label for="title" class="label" id="centrar">Titulo del proyecto</label>
-                <input type="text" id="title" class="input input-wiki" />
-
-                <label for="billetera" class="label" id="centrar">Billetera</label>
-                <input type="number" id="billetera" class="input input-wiki" value='12345' />
-
-                <label for="tutorial" class="label" id="centrar">Agregar tutorial</label>
-                <textarea name="" id="tutorial" placeholder="" className="input-area input-wiki"></textarea>
-                <button type="submit" class="input input-wiki " className="primary-button">Enviar</button>
-                </form>
-        </div>
+      
           
     </div>
      <button
           onClick={addArticle}
           className="font-bold mt-4 bg-blue-500 text-white rounded p-4 shadow-lg"
           style={{ marginLeft: '45%', marginTop: '2%' }}
-        >
+          >
 
           Add article
         </button>
     </div>
   )
+  
 }
 
 export default AddArticle
