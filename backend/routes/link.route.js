@@ -4,6 +4,7 @@ import {
   createTutoriales,
   getTutorial,
   deleteTutorial,
+  updateTutorial
 } from "../controllers/link.controller.js";
 
 
@@ -13,6 +14,7 @@ router.get("/", getTutoriales);
 router.get("/:title", getTutorial);
 router.post("/", createTutoriales);
 router.delete("/:title", deleteTutorial);
-
+router.patch("/:title", updateTutorial)
 
 export default router;
+
