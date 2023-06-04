@@ -15,10 +15,6 @@ const wikiSchema = new Schema({
         ref: 'User',
         require: true,
         unique: true,
-       /*  validate: {
-            validator: Number.isInteger,
-            message: '{VALUE} no es un número entero válido'
-          } */
     }
 })
 

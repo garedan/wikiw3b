@@ -14,6 +14,7 @@ export const register  = async (req, res) => {
     }
 }
 
-export const tutoriales =  async (req, res) => {
+/* export const tutoriales =  async (req, res) => {
     req.json()
 }
+ */

@@ -2,6 +2,7 @@ import { Wiki } from "../models/WikiW3b.js";
 
 //Agregar los tutoriales
 export const createTutoriales = async (req, res) => {
+    console.log("Realizo peticiones");
     try {
         const {title, tutorial, billetera} = req.body;
 
@@ -21,6 +22,7 @@ export const createTutoriales = async (req, res) => {
 
 //ver todos los tutoriales
 export const getTutoriales = async(req, res) => {
+    console.log("Realizo peticiones");
     try {
         const wiki = await Wiki.find()
 
